@@ -16,7 +16,7 @@ namespace Jatify.BuffMeDaddy
     // Add-on for AdminHammer: a "Buffs" tab that gives you any status effect in the game and, per
     // effect, removes its time limit. Separate and optional: AdminHammer works without it.
     // Everything acts on your own character (status effects are client-side); no console cheats used.
-    [BepInPlugin(Guid, "BuffMeDaddy", "1.0.0")]
+    [BepInPlugin(Guid, "BuffMeDaddy", "1.0.1")]
     [BepInDependency(Jatify.AdminHammer.Plugin.Guid)]
     [BepInDependency("seneaL.valheim.ui")]
     public class Plugin : BaseUnityPlugin

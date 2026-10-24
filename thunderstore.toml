@@ -4,7 +4,7 @@ schemaVersion = "0.0.1"
 [package]
 namespace = "Jatify"
 name = "BuffMeDaddy"
-versionNumber = "1.0.0"
+versionNumber = "1.0.1"
 description = "AdminHammer add-on: a Buffs tab to give yourself or other players any status effect, and remove the time limit from each one separately."
 websiteUrl = "https://github.com/imdizmo/BuffMeDaddy"
 containsNsfwContent = false
