@@ -1,0 +1,22 @@
+[config]
+schemaVersion = "0.0.1"
+
+[package]
+namespace = "Jatify"
+name = "BuffMeDaddy"
+versionNumber = "1.0.0"
+description = "AdminHammer add-on: a Buffs tab to give yourself or other players any status effect, and remove the time limit from each one separately."
+websiteUrl = "https://github.com/imdizmo/BuffMeDaddy"
+containsNsfwContent = false
+
+[package.dependencies]
+denikson-BepInExPack_Valheim = "5.4.2202"
+Jatify-AdminHammer = "1.0.1"
+seneaL-SeneaL_UI = "1.2.5"
+
+[publish]
+repository = "https://thunderstore.io"
+communities = ["valheim"]
+
+[publish.categories]
+valheim = ["tools", "client-side", "utility"]

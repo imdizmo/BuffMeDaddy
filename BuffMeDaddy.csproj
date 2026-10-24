@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Build: dotnet build -c Release. Paths default to a Linux Steam install and a Gale profile;
+       override with -p:ValheimDir=... -p:ProfileDir=... -p:AdminHammerDll=... (the profile supplies BepInEx, Jotunn, SeneaL UI and AdminHammer). -->
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>BuffMeDaddy</AssemblyName>
+    <RootNamespace>Jatify.BuffMeDaddy</RootNamespace>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <!-- Keep the build machine's paths out of the DLL (the PDB path is embedded in it). -->
+    <PathMap>$(MSBuildProjectDirectory)=/_/</PathMap>
+    <ValheimDir Condition="'$(ValheimDir)' == ''">$(HOME)/.local/share/Steam/steamapps/common/Valheim</ValheimDir>
+    <ProfileDir Condition="'$(ProfileDir)' == ''">$(HOME)/.local/share/com.kesomannen.gale/valheim/profiles/Default</ProfileDir>
+    <Managed>$(ValheimDir)/valheim_Data/Managed</Managed>
+    <Plugins>$(ProfileDir)/BepInEx/plugins</Plugins>
+    <AdminHammerDll Condition="'$(AdminHammerDll)' == ''">$(Plugins)/Jatify-AdminHammer/AdminHammer.dll</AdminHammerDll>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="BepInEx"><HintPath>$(ProfileDir)/BepInEx/core/BepInEx.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="0Harmony"><HintPath>$(ProfileDir)/BepInEx/core/0Harmony.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Jotunn"><HintPath>$(Plugins)/ValheimModding-Jotunn/Jotunn.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="SeneaL-UI"><HintPath>$(Plugins)/seneaL-SeneaL_UI/SeneaL-UI/SeneaL-UI.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="assembly_valheim"><HintPath>$(Managed)/assembly_valheim.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="assembly_guiutils"><HintPath>$(Managed)/assembly_guiutils.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="assembly_utils"><HintPath>$(Managed)/assembly_utils.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="gui_framework"><HintPath>$(Managed)/gui_framework.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="AdminHammer"><HintPath>$(AdminHammerDll)</HintPath><Private>false</Private></Reference>
+    <Reference Include="Splatform"><HintPath>$(Managed)/Splatform.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Unity.TextMeshPro"><HintPath>$(Managed)/Unity.TextMeshPro.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine"><HintPath>$(Managed)/UnityEngine.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.CoreModule"><HintPath>$(Managed)/UnityEngine.CoreModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.UI"><HintPath>$(Managed)/UnityEngine.UI.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.UIModule"><HintPath>$(Managed)/UnityEngine.UIModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.PhysicsModule"><HintPath>$(Managed)/UnityEngine.PhysicsModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.InputLegacyModule"><HintPath>$(Managed)/UnityEngine.InputLegacyModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.TextRenderingModule"><HintPath>$(Managed)/UnityEngine.TextRenderingModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.AnimationModule"><HintPath>$(Managed)/UnityEngine.AnimationModule.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+</Project>
