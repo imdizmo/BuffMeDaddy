@@ -1,11 +1,10 @@
 {
   "name": "BuffMeDaddy",
-  "version_number": "1.0.1",
+  "version_number": "1.1.0",
   "website_url": "https://github.com/imdizmo/BuffMeDaddy",
-  "description": "AdminHammer add-on: a Buffs tab to give yourself or other players any status effect, and remove the time limit from each one separately.",
+  "description": "AdminHammer add-on: a Buffs tab to give yourself or other players any status effect, remove the time limit per effect, and save buff profiles you apply in one click.",
   "dependencies": [
     "denikson-BepInExPack_Valheim-5.4.2202",
-    "seneaL-SeneaL_UI-1.2.5",
-    "Jatify-AdminHammer-1.0.1"
+    "Jatify-AdminHammer-1.1.0"
   ]
 }

@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <!-- Build: dotnet build -c Release. Paths default to a Linux Steam install and a Gale profile;
-       override with -p:ValheimDir=... -p:ProfileDir=... -p:AdminHammerDll=... (the profile supplies BepInEx, Jotunn, SeneaL UI and AdminHammer). -->
+       override with -p:ValheimDir=... -p:ProfileDir=... -p:AdminHammerDll=... (the profile supplies BepInEx, Jotunn and AdminHammer). -->
   <PropertyGroup>
     <TargetFramework>net472</TargetFramework>
     <LangVersion>latest</LangVersion>
@@ -22,7 +22,6 @@
     <Reference Include="BepInEx"><HintPath>$(ProfileDir)/BepInEx/core/BepInEx.dll</HintPath><Private>false</Private></Reference>
     <Reference Include="0Harmony"><HintPath>$(ProfileDir)/BepInEx/core/0Harmony.dll</HintPath><Private>false</Private></Reference>
     <Reference Include="Jotunn"><HintPath>$(Plugins)/ValheimModding-Jotunn/Jotunn.dll</HintPath><Private>false</Private></Reference>
-    <Reference Include="SeneaL-UI"><HintPath>$(Plugins)/seneaL-SeneaL_UI/SeneaL-UI/SeneaL-UI.dll</HintPath><Private>false</Private></Reference>
     <Reference Include="assembly_valheim"><HintPath>$(Managed)/assembly_valheim.dll</HintPath><Private>false</Private></Reference>
     <Reference Include="assembly_guiutils"><HintPath>$(Managed)/assembly_guiutils.dll</HintPath><Private>false</Private></Reference>
     <Reference Include="assembly_utils"><HintPath>$(Managed)/assembly_utils.dll</HintPath><Private>false</Private></Reference>
