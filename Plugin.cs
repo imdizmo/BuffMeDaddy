@@ -23,6 +23,22 @@ namespace Jatify.BuffMeDaddy
         private void Awake()
         {
             Log.Bind(Logger);
+            AppDomain.CurrentDomain.AssemblyResolve += NewestAdminHammer;   // before any code that touches AdminHammer runs
+            Setup();
+        }
+
+        // ScriptEngine (the dev profile's hot reload) loads each script renamed "Name-<ticks>", so "AdminHammer" alone would
+        // not be found: point it at the newest copy. A normal install loads AdminHammer under its own name; this never runs.
+        private static System.Reflection.Assembly NewestAdminHammer(object sender, ResolveEventArgs e)
+        {
+            if (new System.Reflection.AssemblyName(e.Name).Name != "AdminHammer") return null;
+            return AppDomain.CurrentDomain.GetAssemblies().Where(a => a.GetName().Name.StartsWith("AdminHammer-")).OrderByDescending(a => a.GetName().Name).FirstOrDefault();
+        }
+
+        private void OnDestroy() => AppDomain.CurrentDomain.AssemblyResolve -= NewestAdminHammer;
+
+        private void Setup()
+        {
             UnlimitedCfg = Config.Bind("Buffs", "Unlimited", "", "Status effects (prefab names, comma separated) whose time limit is removed. Set from the Buffs tab.");
             ProfilesCfg = Config.Bind("Buffs", "Profiles", "", "Saved buff profiles (made from the Buffs tab): Name=effect:1,effect:0;... where 1 = no time limit.");
             AdminHammerApi.AddTab(new AdminHammerApi.Tab
