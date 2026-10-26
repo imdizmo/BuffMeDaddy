@@ -32,6 +32,6 @@ A mod manager (r2modman, Gale, Thunderstore App) installs them for you.
 - Mod loader: [BepInEx](https://github.com/BepInEx/BepInEx).
 - Code: written together with Claude (Anthropic's AI), which shows up as a co-author in the commit history.
 
-BuffMeDaddy is an unofficial, fan-made mod. It is not made, endorsed or supported by Iron Gate AB. Please report BuffMeDaddy bugs here. Valheim is a trademark of Iron Gate AB.
+BuffMeDaddy is an unofficial, fan-made mod. It is not made, endorsed or supported by Iron Gate AB. Please report BuffMeDaddy bugs [on GitHub](https://github.com/imdizmo/BuffMeDaddy/issues). Valheim is a trademark of Iron Gate AB.
 
 Source: https://github.com/imdizmo/BuffMeDaddy (MIT; the MIT licence covers BuffMeDaddy's own code only)
