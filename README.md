@@ -28,6 +28,7 @@ A mod manager (r2modman, Gale, Thunderstore App) installs them for you.
 
 - Interface: AdminHammer's panel parts (the Jatify design).
 - Mod loader: [BepInEx](https://github.com/BepInEx/BepInEx).
+- Code: written together with Claude (Anthropic's AI), which shows up as a co-author in the commit history.
 
 BuffMeDaddy is an unofficial, fan-made mod. It is not made, endorsed or supported by Iron Gate AB. Please report BuffMeDaddy bugs here. Valheim is a trademark of Iron Gate AB.
 
