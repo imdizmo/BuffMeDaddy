@@ -1,5 +1,7 @@
 # BuffMeDaddy
 
+[![Join the Discord](https://jatify.com/badges/discord.png)](https://discord.gg/Ru9t2KdfVK) [![Buy me a coffee](https://jatify.com/badges/coffee.png)](https://buymeacoffee.com/imdizmo)
+
 An optional add-on for [AdminHammer](https://thunderstore.io/c/valheim/p/Jatify/AdminHammer/): adds a **Buffs** tab to the admin panel.
 
 [Thunderstore](https://thunderstore.io/c/valheim/p/Jatify/BuffMeDaddy/) · [GitHub](https://github.com/imdizmo/BuffMeDaddy) · [jatify.com](https://jatify.com)
