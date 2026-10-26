@@ -4,7 +4,7 @@ An optional add-on for [AdminHammer](https://thunderstore.io/c/valheim/p/Jatify/
 
 [Thunderstore](https://thunderstore.io/c/valheim/p/Jatify/BuffMeDaddy/) · [GitHub](https://github.com/imdizmo/BuffMeDaddy) · [jatify.com](https://jatify.com)
 
-![The Buffs tab: pick an effect, give or remove it, switch off its time limit](https://raw.githubusercontent.com/imdizmo/BuffMeDaddy/main/screenshots/buffs.webp)
+![The Buffs tab: Rested given with no time limit](https://raw.githubusercontent.com/imdizmo/BuffMeDaddy/main/screenshots/buffs.webp)
 
 ## What it does
 
